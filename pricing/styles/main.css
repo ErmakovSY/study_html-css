@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i");
+@font-face {
+  font-family: 'bebas_neuelight';
+  src: url("./../fonts/bebasneue_light-webfont.woff2") format("woff2"), url("./../fonts/bebasneue_light-webfont.woff") format("woff"), url("./../fonts/bebasneue_light-webfont.otf") format("otf"), url("./../fonts/bebasneue_light-webfont.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'bebas_neuethin';
+  src: url("./../fonts/bebasneue_thin-webfont.woff2") format("woff2"), url("./../fonts/bebasneue_thin-webfont.woff") format("woff"), url("./../fonts/bebasneue_thin-webfont.otf") format("otf"), url("./../fonts/bebasneue_thin-webfont.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'bebas_neueregular';
+  src: url("./../fonts/bebasneue_regular-webfont.woff2") format("woff2"), url("./../fonts/bebasneue_regular-webfont.woff") format("woff"), url("./../fonts/bebasneue_regular-webfont.otf") format("otf"), url("./../fonts/bebasneue_regular-webfont.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'bebas_neuebold';
+  src: url("./../fonts/bebasneue_bold-webfont.woff2") format("woff2"), url("./../fonts/bebasneue_bold-webfont.woff") format("woff"), url("./../fonts/bebasneue_bold-webfont.otf") format("otf"), url("./../fonts/bebasneue_bold-webfont.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'themify';
+  src: url("./../fonts/themify.eot?-fvbane");
+  src: url("./../fonts/themify.eot?#iefix-fvbane") format("embedded-opentype"), url("./../fonts/themify.woff?-fvbane") format("woff"), url("./../fonts/themify.ttf?-fvbane") format("truetype"), url("./../fonts/themify.svg?-fvbane#themify") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+:after,
+:before {
+  box-sizing: border-box; }
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #9284F6; }
+
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+
+.section {
+  height: 600px;
+  width: 330px;
+  background-color: #F5F4F9;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch; }
+  .section:last-child {
+    margin-right: 0; }
+  .section--middle {
+    height: 650px; }
+  .section__header {
+    width: 100%;
+    height: 26%;
+    background-color: #F5F4F9;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .section__price {
+    font-family: "bebas_neuethin";
+    font-size: 60px;
+    font-weight: normal;
+    color: #000;
+    margin-bottom: 25px;
+    position: relative; }
+    .section__price:before {
+      content: '$';
+      font-family: "bebas_neuethin";
+      font-size: 24px;
+      font-weight: normal;
+      color: #000;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%) translateY(25%); }
+    .section__price:after {
+      content: '/hr';
+      font-family: "bebas_neuelight";
+      font-size: 16px;
+      font-weight: normal;
+      color: #000;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      transform: translateX(90%) translateY(-50%); }
+  .section__title {
+    font-family: "bebas_neueregular";
+    font-size: 24px;
+    font-weight: normal;
+    color: #000; }
+  .section__oval {
+    width: 100%;
+    height: 9%;
+    position: relative;
+    overflow: hidden; }
+    .section__oval:after {
+      content: '';
+      position: absolute;
+      height: 400px;
+      width: 150%;
+      top: 0;
+      left: 0;
+      transform: translateY(0) translateX(-16.5%);
+      background-color: #ffffff;
+      border-radius: 50%; }
+  .section__block {
+    width: 100%;
+    height: calc(100% - 35% - 60px);
+    background-color: #ffffff;
+    padding: 45px 45px 90px 90px;
+    position: relative; }
+  .section__logo {
+    font-family: "themify";
+    font-size: 30px;
+    font-weight: normal;
+    color: #000;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%); }
+  .section__text {
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: 300;
+    color: #000;
+    margin-bottom: 40px; }
+  .section__footer {
+    width: 100%;
+    height: 60px;
+    background-color: #F5F4F9;
+    padding-top: 27px;
+    position: relative;
+    display: flex; }
+  .section__button {
+    height: 54px;
+    width: 200px;
+    border: none;
+    border-radius: 27px;
+    font-family: "bebas_neuebold";
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase; }
+    .section__button:hover {
+      cursor: pointer;
+      background-color: #FD8D7B;
+      transition-property: all;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in-out; }
+    .section__button--top {
+      background-color: #6FCFFB;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      z-index: 2; }
+    .section__button--bottom {
+      background-color: #6FCFFB;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%) translateY(50%);
+      z-index: 2; }
+
+.header__icon {
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  top: 10px;
+  right: 10px; }
+.header__p {
+  font-family: "bebas_neueregular";
+  font-size: 24px;
+  font-weight: regular;
+  color: #ffffff;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #FD8D7B;
+  text-align: center;
+  padding: 10px 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%; }
+  .header__p:before {
+    content: '';
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #FD8D7B;
+    transform: translateX(8px) translateY(-8px); }
+  .header__p:after {
+    content: '';
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #FD8D7B;
+    transform: translateX(13px) translateY(-13px); }
+.header__popular {
+  font-family: "bebas_neueregular";
+  font-size: 16px;
+  font-weight: regular;
+  color: #ffffff;
+  text-transform: uppercase;
+  position: absolute;
+  top: 23px;
+  right: -89px;
+  background-color: #3b4040;
+  padding: 5px 20px 5px 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  z-index: 2; }
+  .header__popular:after {
+    content: '';
+    height: 19px;
+    width: 19px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #3b4040;
+    transform: rotate(45deg) translateX(-4px) translateY(10px);
+    z-index: 1; }
+
+.footer__text {
+  font-family: "Roboto";
+  font-size: 10px;
+  font-weight: 300;
+  color: #b3b3b4;
+  margin: auto; }
+
+/*# sourceMappingURL=main.css.map */

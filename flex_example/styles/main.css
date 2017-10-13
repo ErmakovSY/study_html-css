@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.block {
+    
+    flex-basis: 100px;
+    border: 1px solid black;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.red {
+    background-color: red;
+    flex-shrink: 1;
+    order: 1;
+}
+.green {
+    background-color: green;
+    flex-grow: 0;
+    flex-shrink: 2;
+    order: 2;
+}
+.yellow {
+    background-color: yellow;
+    flex-grow: 0;
+    order: 3;
+}
+.grey {
+    background-color: grey;
+    align-self: stretch;
+    order: 4;
+}
+.pink {
+    background-color: pink;
+    order: 5;
+}
+.grey {
+    background-color: grey;
+    order: 6;
+}

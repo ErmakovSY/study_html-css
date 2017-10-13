@@ -1,0 +1,46 @@
+.section {
+    &__whoweare {
+        height: 50vh;
+        background: url('./../images/who-we-are/who-we-are-bg.png') bottom no-repeat;
+        //background-size: 100% 50%;
+        background-size: 100% 100%;
+        //background-attachment: fixed;
+        @include display-flex(column, center, center);
+        padding-top: 200px;
+        @media (max-height: 768px) {
+            background: url('./../images/who-we-are/who-we-are-bg.png') bottom no-repeat;
+            //background-size: 100% 50%;
+            background-size: 100% 100%;
+            //background-attachment: fixed;
+            padding-top: 80px;
+        }
+    }
+    &__logo {
+        text-align: center;
+        margin-bottom: 60px;
+        @media (max-height: 768px) {
+            margin-bottom: 30px;
+        }
+    }
+    &__title {
+        &--white {
+            @include font('Montserrat', 44px, bold, $white);
+            text-align: center;
+            @media (max-height: 768px) {
+                font-size: 22px;
+            }
+        }
+    }
+    &__text {
+        &--white {
+            @include font('Muli', 16px, normal, $white);
+            text-align: center;
+            width: 50%;
+            margin: 0 auto 70px;
+            @media (max-height: 768px) {
+                font-size: 12px;
+                margin-bottom: 35px;
+            }
+        }
+    }
+}

@@ -1,0 +1,167 @@
+.section {
+    &__about {
+        min-height: 100vh;
+        width: 100%;
+        padding-top: 135px;
+        text-align: center;
+        background: $white url('./../images/about/about-bg.png') center no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        @media (max-width: 1366px) {
+            padding-top: 60px;
+        }
+    }
+    &__title {
+        text-transform: uppercase;
+        @include font('Montserrat', 36px, bold, $gray);
+        margin-bottom: 35px;
+        position: relative;
+        z-index: 0;
+        @media (max-width: 1366px) {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        &--overlay {
+            text-transform: uppercase;
+            line-height: 0.9;
+            @include font('Montserrat', 91px, 900, $lightgray);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+            @media (max-width: 1366px) {
+                font-size: 60px;
+            }
+        }
+    }
+    &__text {
+        @include font('Montserrat', 16px, regular, $gray);
+        margin-bottom: 80px;
+        & span {
+            display: block;
+        }
+        @media (max-width: 1366px) {
+            font-size: 12px;
+            margin-bottom: 40px;
+        }
+    }
+    &__btn-wrapper {
+        @include display-flex(row, center, center);
+        margin-bottom: 80px;
+        @media (max-width: 1366px) {
+            margin-bottom: 40px;
+        }
+    }
+    &__button {
+        width: 225px;
+        height: 60px;
+        background-color: $black;
+        @include font('Montserrat', 18px, regular, $yellow);
+        border: none;
+        margin-right: 30px;
+        &:last-child {
+            margin-right: 0;
+        }
+        @media (max-width: 1366px) {
+            height: 30px;
+            width: 115px;
+            font-size: 12px;
+        }
+        &:hover {
+            @include transition(0.3s);
+            background-color: $yellow;
+            color: $black;
+            cursor: pointer;
+        }
+    }
+    &__wrapper {
+        @include display-flex(row, center, center);
+        margin-bottom: 180px;
+        @media (max-width: 1366px) {
+            margin-bottom: 80px;
+        }
+    }
+    &__item {
+        height: 400px;
+        width: 360px;
+        background: $gray bottom right;
+        @include display-flex(column, center, center);
+        margin-right: 35px;
+        position: relative;
+        &:last-child {
+            margin-right: 0;
+        } 
+        @media (max-width: 1366px) {
+            height: 200px;
+            width: 180px;
+        }
+        &:hover {
+            @include transition(0.3s);
+            background: $yellow url('./../images/about/item-bg.png') bottom right no-repeat;
+            background-size: 25%;
+            cursor: pointer;
+        }
+        &:hover .item__logo {
+            @include transition(0.3s);
+            color: $white;
+        }
+        &:hover .item__text {
+            @include transition(0.3s);
+            opacity: 1;
+        }
+    }
+    &__subtitle {
+        @include font('Montserrat', 30px, bold, $gray);
+        text-transform: uppercase;
+        @media (max-width: 1366px) {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+    }
+    &__number-wrapper {
+        @include display-flex(row, space-between, center);
+        margin-bottom: 145px;
+    }
+}
+.item {
+    &__logo {
+        font-size: 100px;
+        color: $yellow;
+        margin-bottom: 50px;
+        @media (max-width: 1366px) {
+            font-size: 50px;
+            margin-bottom: 25px;
+        }
+    }
+    &__title {
+        @include font('Montserrat', 24px, bold, $white);
+        margin-bottom: 35px;
+        @media (max-width: 1366px) {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+    }
+    &__text {
+        @include font('Montserrat', 16px, normal, $white);
+        width: 90%;
+        opacity: 0;
+        @media (max-width: 1366px) {
+            font-size: 9px;
+        }
+    }
+}
+.number{
+    &__title {
+        @include font('Muli', 46px, bold, $gray);
+        @media (max-width: 1366px) {
+            font-size: 22px;
+        }
+    } 
+    &__description {
+        @include font('Muli', 13px, normal, $gray);
+        @media (max-width: 1366px) {
+            font-size: 7px;
+        }
+    }
+}

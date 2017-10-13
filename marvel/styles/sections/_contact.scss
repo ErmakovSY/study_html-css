@@ -1,0 +1,67 @@
+.section {
+    &__contact {
+        min-height: 100vh;
+        width: 100%;
+        padding-top: 165px;
+        text-align: center;
+        background: url('./../images/contact/contact-bg.png')center no-repeat;
+        background-attachment: fixed;
+        @media (max-height: 768px) {
+            padding-top: 70px;
+        }
+    }
+    &__title {
+        &--contact {
+            margin-bottom: 50px;
+            @media (max-height: 768px) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+    &__form {
+        width: 100%;
+        @include display-flex(row, space-between, stretch);
+        flex-wrap: wrap;
+    }
+}
+.form {
+    &__input {
+        height: 60px;
+        width: calc((100% - 20px) / 2);
+        margin-right: 20px;
+        margin-bottom: 20px;
+        padding: 20px;
+        border: 1px solid $lightgray;
+        @include placeholder($gray, 1, 14px, 'Noto Sans');
+        &:nth-child(2n + 2) {
+            margin-right: 0;
+        }
+        @media (max-height: 768px) {
+            height: 30px;
+            padding: 7px;
+        }
+    }
+    &__textarea {
+        width: 100%;
+        height: 500px;
+        margin-bottom: 20px;
+        padding: 20px;
+        border: 1px solid $lightgray;
+        @include placeholder($gray, 1, 14px, 'Noto Sans');
+        @media (max-height: 768px) {
+            height: 300px;
+            padding: 7px;
+        }
+    }
+    &__button {
+        width: 150px;
+        height: 60px;
+        border: none;
+        background-color: $yellow;
+        @include font('Montserrat', 18px, regular, $black);
+        text-transform: uppercase;
+        @media (max-height: 768px) {
+            height: 30px;
+        }
+    }
+}

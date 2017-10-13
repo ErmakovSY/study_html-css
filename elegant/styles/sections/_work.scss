@@ -1,0 +1,61 @@
+.section {
+    &__wrapper {
+        &--work {
+            margin-bottom: 80px;
+        }
+    }
+    &__item {
+        &--work {
+            width: calc((100% - 60px) / 3);
+            position: relative;
+            max-height: 420px;
+            margin-right: 30px;
+            &:last-of-type {
+                margin-right: 0;
+            }
+            &:hover .item__overlay {
+                opacity: 1;
+            }
+        }
+    }
+    &__btn {
+        height: 60px;
+        width: calc((100% - 100px) / 3);
+        background-color: $trp;
+        border: 2px solid $darkgray;
+        @include font('Lato', 24px, 400, $darkgray);
+        text-transform: uppercase;
+        margin-bottom: 85px;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        &:hover {
+            background-color: $darkgray;
+            color: $white;
+        }
+    }
+}
+.item {
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: url("./../images/img-work-overlay.png") center no-repeat;
+        @include display-flex(column, center, center);
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        opacity: 0; 
+    }
+}
+.overlay {
+    &__title {
+        @include font('Lato', 22px, 400, $white);
+        text-transform: uppercase;
+        margin-bottom: 35px;
+    }
+    &__icon {
+        height: 45px;
+        width: 45px;
+    }
+}

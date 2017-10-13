@@ -1,0 +1,137 @@
+.section {
+    &__main {
+
+    }
+    &__slider-wrapper {
+        width: 100%;
+        height: 100%;
+        padding: 25px 25px 0;
+        @include display-flex(column, space-between, center);
+    }
+    &__slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__maintitle-block {
+        @include display-flex(column, center, center);
+        flex-grow: 1;
+    }
+    &__maintitle {
+        @include font('Roboto', 50px, 700, $white);
+        text-transform: uppercase;
+        margin-bottom: 25px;
+    }
+    &__mainsubtitle {
+        @include font('Roboto', 28px, 100, $white);
+        margin-bottom: 30px;
+        span {
+            color: $yellow;
+        }
+    }
+    &__btn {
+        width: 125px;
+        height: 45px;
+        border: 1px solid $black;
+        border-radius: 7px;
+        background-color: $black;
+        text-transform: uppercase;
+        @include font('Roboto', 12px, 700, $yellow);
+        &:hover {
+            @include transition(0.3s);
+            color: $white;
+            background-color: $gray;
+            cursor: pointer;
+        }
+    }
+    &__slider-controls {
+        width: 100%;
+        @include display-flex(row, space-between, center);
+    }
+    &__pagination-item {
+        width: calc(100% / 3);
+        height: 3px;
+        background-color: $trp;
+        border: none;
+        &--active,
+        &:hover {
+            @include transition(0.3s);
+            background-color: $yellow;
+            cursor: pointer;
+        }
+    }
+    &__slider-arrows {
+        width: 100%;
+        padding: 0 25px;
+        @include display-flex(row, space-between, center);
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+    &__slider-arrow {
+        width: 58px;
+        height: 58px;
+        border: 2px solid $gray;
+        border-radius: 5px;
+        display: flex;
+        i {
+            margin: auto;
+            font-size: 30px;
+            color: $gray;
+        }
+        &:hover {
+            @include transition(0.3s);
+            border-color: $white;
+            cursor: pointer;
+        }
+        &:hover i {
+            @include transition(0.3s);
+            color: $white;
+        }
+    }
+    &__slider-scroll {
+        width: 70px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+}
+.header {
+    width: 100%;
+    padding: 0 400px;
+    @include display-flex(row, space-between, center);
+    @media(max-width: 1366px) {
+        padding: 0;
+    }
+    &__logo {
+        width: 160px;
+        height: 50px;
+    }
+    &__nav {
+        @include display-flex(row, space-between, center);
+    }
+    &__link {
+        @include font('Roboto', 15px, 700, $white);
+        text-transform: uppercase;
+        text-decoration: none;
+        display: block;
+        margin-right: 35px;
+        &:last-child {
+            margin-right: 0;
+        }
+        &:hover {
+            @include transition(0.3s);
+            cursor: pointer;
+            color: $yellow;
+        }
+    }
+}

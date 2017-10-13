@@ -1,0 +1,71 @@
+.section {
+    &__popular {
+        height: 80vh;
+        background: $white;
+        padding: 75px 15px;
+    }
+    &__title {
+        text-align: center;
+        @include font('Roboto', 28px, 700, $black);
+        text-transform: uppercase;
+        margin-bottom: 75px;
+        @media(max-width: 1366px) {
+            margin-bottom: 25px;
+        }
+    }
+    &__wrapper {
+        @include display-flex(row, space-between, center);
+    }
+    &__item {
+        width: calc((100% - 60px) / 3);
+        margin-right: 30px;
+        position: relative;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__text-block {
+        @include display-flex(row, space-between, center);
+    } 
+    &__title-block {
+        @include display-flex(column, center, flex-start);
+        width: 50%;
+    }
+}
+.popular {
+    &__title {
+        @include font('Roboto', 15px, 700, $black);
+        text-transform: uppercase;
+    }
+    &__price {
+        @include font('Roboto', 16px, 300, $black);
+    }
+    &__select {
+        height: 37px;
+        width: 140px;
+        border: 1px solid $lightgray;
+        border-radius: 5px;
+        margin-right: 10px;
+        padding: 0 5px;
+        @include font('Roboto', 12px, 700, $black);
+        text-transform: uppercase;
+        &:hover {
+            @include transition(0.3s);
+            cursor: pointer;
+        }
+    }
+    &__btn {
+        height: 37px;
+        width: 95px;
+        background-color: $lightgray;
+        border: none;
+        border-radius: 5px;
+        @include font('Roboto', 12px, 700, $white);
+        text-transform: uppercase;
+        &:hover {
+            @include transition(0.3s);
+            cursor: pointer;
+            color: $yellow;
+        }
+    }
+}

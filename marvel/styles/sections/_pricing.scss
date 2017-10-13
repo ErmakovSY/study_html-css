@@ -1,0 +1,132 @@
+.section {
+    &__pricing {
+        min-height: 100vh;
+        width: 100%;
+        padding-top: 135px;
+        text-align: center;
+        background: url('./../images/pricing/pricing-bg.png') center no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-attachment: fixed;
+        @media (max-height: 768px) {
+            padding-top: 60px;
+        }
+    }
+    &__item {
+        &--pricing {
+            width: calc((100% - 60px) / 3);
+            margin-right: 30px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+.item {
+    &__header {
+        height: 40px;
+        width: 100%;
+        background-color: $lightgray;
+        display: flex;
+        margin-bottom: 2px;
+        @media (max-height: 768px) {
+            height: 25px;
+        }
+    }
+    &__description {
+        @include font('Muli', 12px, regular, $gray);
+        margin: auto;
+    }
+    &__top-block {
+        min-height: 210px;
+        width: 100%;
+        background: url('./../images/pricing/pricing-image1.png') center no-repeat;
+        background-size: cover;
+        padding: 30px;
+        @include display-flex(column, center, center);
+        @media (max-height: 768px) {
+            min-height: 140px;
+            padding: 15px;
+        }
+    }
+    &__title {
+        &--pricing {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+            @media (max-height: 768px) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &__price {
+        @include font('Muli', 60px, bold, $white);
+        line-height: 60px;
+        margin-bottom: 30px;
+        position: relative;
+        @media (max-height: 768px) {
+            @include font('Muli', 36px, bold, $white);
+            line-height: 36px;
+            margin-bottom: 15px;
+        }
+        &--money {
+            @include font('Muli', 30px, normal, $white);
+            vertical-align: text-top;
+            @media (max-height: 768px) {
+                font-size: 18px;
+            }
+        }
+        &--period {
+            @include font('Muli', 24px, bold, $white);
+            text-transform: uppercase;
+            @media (max-height: 768px) {
+                font-size: 13px;
+            }
+        }
+    }
+    &__text {
+        &--pricing {
+            opacity: 1;
+            @include font('Muli', 12px, regular, $gray);
+            margin: 0 auto;
+        }
+        &--white {
+            color: $white;
+            margin-bottom: 5px;
+        }
+    }
+    &__main-block {
+        background-color: $white;
+        width: 100%;
+        padding-top: 60px;
+        margin-bottom: 2px;
+        @media (max-height: 768px) {
+            padding-top: 20px;
+        }
+    }
+    &__list {
+        width: 100%;
+        line-height: 60px;
+        opacity: 1;
+        border-bottom: 1px solid $middlegray;
+        @include font('Muli', 12px, regular, $gray);
+        @media (max-height: 768px) {
+            line-height: 40px;
+        }
+    }
+    &__button {
+        &--pricing {
+            width: 100%;
+            height: 40px;
+            border: none;
+            background-color: $white;
+            @include font('Muli', 12px, regular, $gray);
+            @media (max-height: 768px) {
+                height: 25px;
+            }
+        }
+    }
+}
+.invisible {
+    opacity: 0;
+}

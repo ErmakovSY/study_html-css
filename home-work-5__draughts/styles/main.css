@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F1F1F1;
+    font-family: sans-serif;
+}
+
+
+.box {
+    position: relative;
+    min-width: 444px;
+    max-width: 800px;
+    margin: auto;
+    border: 2px solid #0E131B;
+}
+.box:before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+
+
+.box__board {
+    background-color: #E5CBBB;
+    min-width: 444px;
+    min-height: 444px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    padding: 20px;
+}
+.box__board--boardframe {
+    position: relative;
+    border: 3px solid #0E131B;
+    background-color: #0E131B;
+    height: 100%;
+    width: 100%;
+}
+.item {
+    position: absolute;
+    background-color: #E5CBBB;
+    min-height: 50px;
+    min-width: 50px;
+    height: 12.5%;
+    width: 12.5%;
+}
+
+.item__row1 {
+    top: 0;
+}
+.item__row2 {
+    top: 12.5%;
+}
+.item__row3 {
+    top: 25%;
+}
+.item__row4 {
+    top: 37.5%;
+}
+.item__row5 {
+    top: 50%;
+}
+.item__row6 {
+    top: 62.5%;
+}
+.item__row7 {
+    top: 75%;
+}
+.item__row8 {
+    top: 87.5%;
+}
+
+.item__col1 {
+    left: 0;
+}
+.item__col2 {
+    left: 12.5%;
+}
+.item__col3 {
+    left: 25%;
+}
+.item__col4 {
+    left: 37.5%;
+}
+.item__col5 {
+    left: 50%;
+}
+.item__col6 {
+    left: 62.5%;
+}
+.item__col7 {
+    left: 75%;
+}
+.item__col8 {
+    left: 87.5%;
+}
+
+.item__chess:before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+
+}
+.item__col1:before {
+    left: 100%;
+}
+.item__col3:before {
+    left: 100%;
+}
+.item__col5:before {
+    left: 100%;
+}
+.item__col7:before {
+    left: 100%;
+}
+.item__col2:before {
+    left: -100%;
+}
+.item__col4:before {
+    left: -100%;
+}
+.item__col6:before {
+    left: -100%;
+}
+.item__col8:before {
+    left: -100%;
+}
+.item__chess--round_dark:before {
+    background-color: saddlebrown;
+}
+.item__chess--round_white:before {
+    background-color: #ccc;
+}

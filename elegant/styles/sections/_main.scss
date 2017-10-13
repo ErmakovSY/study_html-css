@@ -1,0 +1,96 @@
+.section {
+    &__main {
+        height: 100vh;
+        background: url("./../images/main-bg.png") center no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    &__image {
+        width: 100%;
+        height: 100%;
+        &--contain {
+            object-fit: contain;
+        }
+        &--cover {
+            object-fit: cover;
+        }
+    }
+    &__maintitle-block {
+        @include display-flex(column, center, center);
+    }
+    &__maintitle {
+        @include font('Raleway', 48px, 700, $white);
+        text-transform: uppercase;
+        margin-bottom: 100px;
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            height: 2px;
+            width: 85px;
+            background-color: $white;
+            transform: translate(-50%, 50px);
+        }
+    }
+    &__mainsubtitle {
+        @include font('Lato', 22px, 400, $white);
+        text-align: center;
+        width: 60%;
+    }
+    &__button {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        border: 3px solid $lightgray;
+        margin-bottom: 45px;
+        cursor: pointer;
+        &:hover {
+            transition: all 0.3s ease-in-out;
+            border-color: $white;
+            a {
+                transition: all 0.3s ease-in-out;
+                color: $white;
+            }
+        }
+    }
+    &__down {
+        display: block;
+        width: 100%;
+        line-height: 84px;
+        text-align: center;
+        vertical-align: middle;
+        color: $lightgray;
+        font-size: 62px;    
+    }
+}
+.header {
+    &__wrapper {
+        width: 100%;
+        padding-top: 50px;
+        @include display-flex(row, space-between, center);
+    }
+    &__logo {
+        width: 110px;
+        height: 20px;
+    }
+    &__nav {
+        @include display-flex(row, space-between, center);
+    }
+    &__link {
+        @include font('Lato', 14px, 500, $white);
+        text-transform: uppercase;
+        text-decoration: none;
+        display: block;
+        margin-right: 50px;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        &:last-child {
+            margin-right: 0;
+        }
+        &:hover {
+            color: $lightgray;
+        }
+    }
+}

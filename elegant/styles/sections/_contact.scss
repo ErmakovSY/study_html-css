@@ -1,0 +1,74 @@
+.section {
+    &__contact {
+        width: 100%;
+        background: url('./../images/footer-bg.png');
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    &__container {
+        width: 670px;
+        margin: 0 auto;
+        @include display-flex(row, space-between, center);
+        flex-wrap: wrap;
+    }
+    &__social {
+        margin-bottom: 65px;
+    }
+}
+.form {
+    &__input {
+        height: 45px;
+        width: calc((100% - 64px) / 2);
+        margin-bottom: 90px;
+        padding: 15px 25px;
+        border: 2px solid $trp;
+        border-bottom: 2px solid $white;
+        background-color: $trp;
+        @include placeholder($lightgray, 1, 18px, 'Lato');
+        @include font('Lato', 18px, 400, $lightgray);
+        font-style: italic;
+        cursor: pointer;
+        &:first-of-type {
+            margin-right: 60px;
+        }
+        &:last-of-type {
+            width: 100%;
+        }
+        &:hover,
+        &:focus {
+            transition: all 0.3s ease-in-out;
+            color: $white;
+            border-top: 2px solid $white;
+        }
+    }
+
+    &__button {
+        width: 185px;
+        height: 60px;
+        margin-bottom: 120px;
+        border: 2px solid $white;
+        background-color: $trp;
+        @include font('Lato', 24px, 400, $white);
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            background-color: $white;
+            color: $darkgray;
+        }
+    }
+}
+.social {
+    &__icon {
+        font-size: 24px;
+        color: $white;
+        margin-right: 30px;
+        &:last-of-type {
+            margin-right: 0;
+        }
+        &:hover {
+            transition: all 0.3s ease-in-out;
+            color: $lightgray;
+        }
+    }
+}

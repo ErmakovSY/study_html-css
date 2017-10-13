@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+body {
+  width: 100%;
+  height: 100%; }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+.container {
+  padding: 45px 80px 0; }
+
+.header {
+  width: 100%;
+  height: 100%;
+  background: url("../images/background.png") no-repeat center;
+  background-size: cover;
+  text-align: center;
+  padding-bottom: 165px; }
+  .header__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 210px; }
+  .header__logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #6E6060;
+    text-transform: uppercase; }
+    .header__logo:hover {
+      cursor: pointer;
+      color: #7BEEC7; }
+  .header__linkbutton {
+    height: 15px;
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start; }
+    .header__linkbutton:hover {
+      cursor: pointer; }
+    .header__linkbutton:hover .header__stripe {
+      background-color: #7BEEC7; }
+  .header__stripe {
+    height: 1px;
+    background-color: #6E6060; }
+    .header__stripe--top {
+      width: 30px; }
+    .header__stripe--middle {
+      width: 15px; }
+    .header__stripe--bottom {
+      width: 23px; }
+  .header__title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #6E6060;
+    text-transform: uppercase;
+    margin-bottom: 30px; }
+  .header__subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #6E6060;
+    text-transform: uppercase; }
+
+.section {
+  width: 100%;
+  padding-top: 100px;
+  text-align: center; }
+  .section__about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+  .section__column {
+    height: 100%;
+    width: calc((100% - 30px) / 2);
+    text-align: left;
+    margin-right: 30px; }
+  .section__column:nth-child(2n + 2) {
+    margin-right: 0; }
+  .section__title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #6E6060;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    position: relative; }
+    .section__title:before {
+      content: '';
+      position: absolute;
+      width: 65px;
+      height: 20px;
+      top: 50%;
+      left: -2px;
+      background-color: #7BEEC7;
+      z-index: -2; }
+  .section__subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #6E6060;
+    text-transform: uppercase;
+    margin-bottom: 20px; }
+  .section__text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #6E6060;
+    line-height: 30px; }
+  .section .section__title {
+    display: inline-block; }
+  .section .section__text--subtitle {
+    margin: 0 auto;
+    width: 70%;
+    line-height: 24px; }
+
+.benefits__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  padding-top: 90px; }
+.benefits__item {
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  padding-bottom: 45px; }
+.benefits__item:nth-child(3n + 3) {
+  margin-right: 0; }
+.benefits__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  margin-bottom: 15px; }
+.benefits__quad {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #7BEEC7;
+  padding: 3px; }
+.benefits__ion {
+  font-size: 30px;
+  display: block;
+  padding: 2px; }
+.benefits__symbol {
+  color: #eee;
+  padding-top: 2px; }
+.benefits__title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #6E6060;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px; }
+.benefits__text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  color: #6E6060;
+  text-align: left; }
+
+.team__container {
+  width: 100%;
+  padding-top: 90px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap; }
+.team__img-wrapper {
+  width: calc((100% - 90px) / 4);
+  margin-right: 30px;
+  margin-bottom: 30px;
+  border: 1px solid transparent; }
+  .team__img-wrapper:hover {
+    cursor: pointer;
+    border: 1px solid #6E6060; }
+.team__img-wrapper:nth-child(4n + 4) {
+  margin-right: 0; }
+.team__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
+.footer {
+  width: 100%;
+  height: 330px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #7BEEC7;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch; }
+  .footer__item {
+    height: 100%;
+    margin-right: 30px;
+    padding: 20px 25px;
+    width: calc((100% - 30px) / 2); }
+    .footer__item--right {
+      background-color: #eee;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: stretch; }
+    .footer__item--left {
+      padding: 0; }
+  .footer__item:nth-child(2n + 2) {
+    margin-right: 0; }
+  .footer__text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #6E6060;
+    text-transform: uppercase;
+    line-height: 24px;
+    margin-bottom: 10px; }
+    .footer__text--white {
+      color: #eee;
+      margin-bottom: 15px; }
+  .footer__description {
+    line-height: 22px;
+    margin-bottom: 10px; }
+  .footer__input {
+    outline: none;
+    height: 40px;
+    width: 100%;
+    border: 1px solid #CDCDCD;
+    color: #CDCDCD;
+    padding-left: 10px;
+    padding-right: 110px; }
+    .footer__input:hover {
+      cursor: pointer;
+      color: #6E6060;
+      background-color: #CDCDCD; }
+  .footer__button {
+    height: 40px;
+    text-transform: uppercase;
+    font-weight: bold; }
+    .footer__button--left {
+      width: 165px;
+      background-color: #eee;
+      color: #7BEEC7;
+      border: 1px solid transparent; }
+    .footer__button--right {
+      width: 100px;
+      position: absolute;
+      bottom: 20px;
+      right: 25px;
+      border: 1px solid transparent;
+      background-color: #7BEEC7;
+      color: #eee; }
+    .footer__button:hover {
+      cursor: pointer;
+      color: #6E6060;
+      border-color: #6E6060; }
+
+/*# sourceMappingURL=main.css.map */

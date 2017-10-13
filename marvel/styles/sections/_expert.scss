@@ -1,0 +1,117 @@
+.section {
+    &__expert {
+        min-height: 100vh;
+        width: 100%;
+        padding-top: 300px;
+        text-align: center;
+        background: $white;
+        @media (max-height: 768px) {
+            padding-top: 70px;
+        }
+    }
+    &__title {
+        &--expert {
+            margin-bottom: 130px;
+            @media (max-height: 768px) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+    &__item {
+        &--expert {
+            width: calc((100% - 60px) / 3);
+            margin-right: 30px;
+            position: relative;
+            &:last-child {
+                margin-right: 0;
+            }
+            &:hover .item__overlay {
+                @include transition(0.3s);
+                opacity: 1;
+            }
+        }
+    }
+}
+.item {
+    &__photo-wrapper {
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 3px;
+    }
+    &__block {
+        width: 100%;
+        padding: 0 25px;
+        background-color: $lightgray;
+    }
+    &__under-photo {
+        text-transform: uppercase;
+        line-height: 60px;
+        background-color: $lightgray;
+        @media (max-height: 768px) {
+            line-height: 40px;
+        }
+    }
+    &__name {
+        @include font('Montserrat', 16px, bold, $gray);
+        border-bottom: 1px dashed $gray;
+    }
+    &__job {
+        @include font('Montserrat', 11px, regular, $gray);
+    }
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: $yellow;
+        opacity: 0;
+        padding: 90px 25px 0;
+        @include display-flex(column, space-between, stretch);
+        @media (max-height: 768px) {
+            padding: 55px 10px 0;
+        }
+    }
+}
+.overlay {
+    &__name {
+        @include font('Montserrat', 24px, bold, $gray);
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        @media (max-height: 768px) {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+    }
+    &__job {
+        @include font('Montserrat', 16px, regular, $gray);
+        text-transform: uppercase;
+        margin-bottom: 70px;
+        @media (max-height: 768px) {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+    }
+    &__text {
+        @include font('Muli', 14px, regular, $gray);
+
+    }
+    &__social {
+        height: 120px;
+        padding: 0 35px;
+        border-top: 1px dashed $middlegray;
+        @include display-flex(row, space-between, center);
+        @media (max-height: 768px) {
+            height: 80px;
+            padding: 0 20px;
+        }
+        &--icon {
+            color: $gray;
+            &:hover {
+                @include transition(0.3s);
+                cursor: pointer;
+                color: $lightgray;
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@mixin font-title($font-size) {
+    font-family: 'Montserrat', sans-serif;
+    font-size: $font-size;
+    font-weight: bold;
+    color: $gray;
+    text-transform: uppercase;    
+}
+@mixin font-subtitle($font-size) {
+    font-family: 'Open Sans', sans-serif;
+    font-size: $font-size;
+    font-weight: bold;
+    color: $gray;
+    text-transform: uppercase;    
+}
+@mixin font-text($font-size) {
+    font-family: 'Open Sans', sans-serif;
+    font-size: $font-size;
+    color: $gray;    
+}

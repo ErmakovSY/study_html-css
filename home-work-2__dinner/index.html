@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dinner List</title>
+  <link href="styles/main.css" rel="stylesheet">
+</head>
+<body>
+  <div class="page">
+  <header>
+    <p class="title_text">CSS Dinner Shoping List</p>
+    <p class="under_title_text">Let's go to the mall!</p>
+  </header>
+  <main>
+    <section>
+      <form action="#">
+        <div class="container">
+          <div class="item">
+            <label class="item__label">
+              <input type="checkbox">
+              <span class="text_item">A lot of pickles <span class="text_item_small">(for the next lessons about CSS)</span></span>
+            </label>
+          </div>
+          <div class="item">
+            <label class="item__label">
+              <input type="checkbox">
+              <span class="text_item">10 apples <span class="text_item_small">(for more CSS manipulations)</span></span>
+            </label>
+          </div>
+          <div class="item">
+            <label class="item__label">
+              <input type="checkbox">
+              <span class="text_item">20 oranges <span class="text_item_small">(because they are awesome)</span></span>
+            </label>
+          </div>
+          <div class="item">
+            <label class="item__label">
+              <input type="checkbox">
+              <span class="text_item">13 plates <span class="text_item_small">(hm... they always disappear)</span></span>
+            </label>
+          </div>
+          <div class="item">
+            <label class="item__label">
+              <input type="checkbox">
+              <span class="text_item">15 bentos</span>
+            </label>
+          </div>
+          <div class="item">
+            <label class="item__label">
+              <input type="checkbox">
+              <span class="text_item">1 bottle of Sake ^_^ <span class="text_item_small">(for my friends)</span></span>
+            </label>
+          </div>
+        </div>
+      </form>
+    </section>
+    <div class="footer">
+      <p class="footer_text">Bon appetit :)</p>
+    </div>
+  </main>
+  </div>
+  <script src="js/jquery-3.2.1.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(".item__label").on("click", function(e) {
+        e.preventDefault();
+        $(this).parent().toggleClass("selected");
+        let chk = $(this).children("input");
+        if(chk.attr("checked") == "checked") {
+          chk.removeAttr("checked");
+        }else{
+          chk.attr("checked", true);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

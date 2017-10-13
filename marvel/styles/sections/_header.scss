@@ -1,0 +1,36 @@
+.header {
+    background-color: $darkgray;
+    &__container {
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__nav-item {
+        text-transform: uppercase;
+        margin-left: 60px;
+        @include font('Montserrat', 14px, 300, $white);
+        letter-spacing: 0.04em;
+        &--active,
+        &:hover {
+            @include transition(0.3s);
+            color: $yellow;
+        }
+        @media (max-width: 1060px) {
+            display: none;
+        }
+    }
+    &__nav-btn {
+        display: none;
+        color: $white;
+        font-size: 24px;
+        border: none;
+        &:hover {
+            @include transition(0.3s);
+            color: $yellow;
+        }
+        @media (max-width: 1060px) {
+            display: block;
+        }
+    }
+}

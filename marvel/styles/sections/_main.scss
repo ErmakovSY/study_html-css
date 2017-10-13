@@ -1,0 +1,72 @@
+.section {
+    &__main {
+        min-height: calc(100vh - 80px);
+        background: $white url('./../images/main-screen/main-screen-bg.png') right bottom no-repeat;
+        background-size: contain;
+        background-attachment: fixed;
+    }
+    &__slider-wrapper {
+        min-height: calc(100vh - 80px);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    &__maintitle {
+        text-transform: uppercase;
+        @include font('Montserrat', 60px, 900, $gray);
+        margin-bottom: 70px;
+        position: relative;
+        z-index: 2;
+        &:before {
+            position: absolute;
+            content: '';
+            width: 190px;
+            height: 190px;
+            border-radius: 50%;
+            top: 50%;
+            left: -35px;
+            transform: translateY(-50%);
+            background-color: $yellow;
+            z-index: -1;
+        }
+        span {
+            display: block;
+        }
+    }
+    &__description {
+        @include font('Lato', 14px, regular, $gray);
+        line-height: 1.7;
+        max-width: 770px;
+        margin-bottom: 20px;
+    }
+    &__btn {
+        width: 176px;
+        height: 54px;
+        border: 1px solid $gray;
+        background-color: $trp;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        @include font('Montserrat', 16px, 400, $gray);
+        margin-bottom: 20px;
+        &:hover {
+            @include transition(0.3s);
+            color: $white;
+            background-color: $gray;
+            cursor: pointer;
+        }
+    }
+    &__pagination-item {
+        width: 22px;
+        height: 4px;
+        margin-right: 4px;
+        background-color: $lightgray;
+        border: none;
+        &--active,
+        &:hover {
+            @include transition(0.3s);
+            background-color: $gray;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,217 @@
+@import './_fonts.scss';
+@import './_colors.scss';
+@import './_mixins.scss';
+@import './_reset.scss';
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: $violet; 
+}
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; 
+}
+.section {
+  height: 600px;
+  width: 330px;
+  background-color: $lightgray;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  &:last-child {
+    margin-right: 0; 
+  }
+  &--middle {
+    height: 650px; 
+  }
+  &__header {
+    width: 100%;
+    height: 26%;
+    background-color: $lightgray;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+  }
+  &__price {
+        @include font('bebas_neuethin', 60px, normal, $black);
+        margin-bottom: 25px;
+        position: relative;
+        &:before{
+            content: '$';
+            @include font('bebas_neuethin', 24px, normal, $black);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateX(-100%) translateY(25%);
+        }
+        &:after{
+            content: '/hr';
+            @include font('bebas_neuelight', 16px, normal, $black);
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transform: translateX(90%) translateY(-50%);
+        }
+    }
+  &__title {
+         @include font('bebas_neueregular', 24px, normal, $black);
+    }
+  &__oval {
+    width: 100%;
+    height: 9%;
+    position: relative;
+    overflow: hidden;
+    &:after {
+      content: '';
+      position: absolute;
+      height: 400px;
+      width: 150%;
+      top: 0;
+      left: 0;
+      transform: translateY(0) translateX(-16.5%);
+      background-color: $white;
+      border-radius: 50%;
+    }
+  }
+  &__block {
+    width: 100%;
+    height: calc(100% - 35% - 60px);
+    background-color: $white;
+    padding: 45px 45px 90px 90px;
+    position: relative;
+  }
+  &__logo {
+    font-family: "themify";
+    font-size: 30px;
+    font-weight: normal;
+    color: #000;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%); 
+  }
+  &__text {
+    @include font('Roboto', 16px, 300, $black);
+    margin-bottom: 40px;
+  }
+  &__footer {
+    width: 100%;
+    height: 60px;
+    background-color: $lightgray;
+    padding-top: 27px;
+    position: relative; 
+    display: flex;
+  }
+  &__button {
+    height: 54px;
+    width: 200px;
+    border: none;
+    border-radius: 27px;
+    font-family: "bebas_neuebold";
+    font-size: 18px;
+    font-weight: bold;
+    color: $white;
+    text-transform: uppercase;
+    &:hover {
+       cursor: pointer;
+       background-color: $red; 
+       @include transition(0.3s);
+    }
+    &--top {
+      background-color: $blue;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      z-index: 2; 
+    }
+    &--bottom {
+      background-color: $blue;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%) translateY(50%);
+      z-index: 2; 
+    }
+  }
+}
+.header {
+    &__icon {
+        height: 60px;
+        width: 60px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    &__p {
+        @include font('bebas_neueregular', 24px, regular, $white);
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: $red;
+        text-align: center;
+        padding: 10px 0;
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        &:before {
+            content: '';
+            height: 14px;
+            width: 14px;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: $red;
+            transform: translateX(8px) translateY(-8px);
+        }
+        &:after {
+            content: '';
+            height: 4px;
+            width: 4px;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: $red;
+            transform: translateX(13px) translateY(-13px);
+        }
+    }
+    &__popular {
+        @include font('bebas_neueregular', 16px, regular, $white);
+        text-transform: uppercase;
+        position: absolute;
+        top: 23px;
+        right: -89px;
+        background-color: $darkgray;
+        padding: 5px 20px 5px 15px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        z-index: 2;
+        &:after {
+            content: '';
+            height: 19px;
+            width: 19px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: $darkgray;
+            transform: rotate(45deg) translateX(-4px) translateY(10px);
+            z-index: 1;
+        }
+    }
+}
+.footer__text {
+      @include font('Roboto', 10px, 300, $gray);
+    margin: auto;
+}

@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #F1F1F1;
+    font-family: sans-serif;
+}
+
+.main {
+    position: relative;
+    min-width: 444px;
+    max-width: 800px;
+    margin: auto;
+    border: 2px solid #0E131B;
+}
+.main:before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+
+
+.main__board {
+    background-color: #E5CBBB;
+    min-width: 444px;
+    min-height: 444px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    padding: 20px;
+}
+.main__board--frame {
+    position: relative;
+    border: 3px solid #0E131B;
+    background-color: #0E131B;
+    height: 100%;
+    width: 100%;
+}
+.item {
+    float: left;
+    background-color: #E5CBBB;
+    min-height: 50px;
+    min-width: 50px;
+    height: 12.5%;
+    width: 12.5%;
+    position: relative;
+}
+
+.item__row-paired {
+    margin-left: 12.5%;
+}
+.item__row-unpaired {
+    margin-right: 12.5%;
+}
+
+.item__chess:before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+.item__chess--dark:before {
+    background-color: saddlebrown;
+}
+.item__chess--white:before {
+    background-color: #ccc;
+}
+.item__row-paired:before {
+    left: -100%;
+}
+.item__row-unpaired:before {
+    left: 100%;
+}

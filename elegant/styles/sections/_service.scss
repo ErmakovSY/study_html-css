@@ -1,0 +1,52 @@
+.section {
+    &__title {
+        @include font('Raleway', 35px, 700, $darkgray);
+        text-transform: uppercase;
+        margin: 120px 0 100px;
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            height: 2px;
+            width: 85px;
+            background-color: $darkgray;
+            transform: translate(-50%, 50px);
+        }
+        &--white {
+            color: $white;
+            &:after {
+                background-color: $white;
+            }
+        }
+    }
+    &__wrapper {
+        width: 100%;
+        @include display-flex(row, space-between, center);
+        margin-bottom: 120px;
+    }
+    &__item {
+        width: calc((100% - 100px) / 3);
+        @include display-flex(column, flex-start, center);
+        margin-right: 50px;
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+}
+.item {
+    &__img {
+        height: 150px;
+        width: 200px;
+        margin-bottom: 30px;
+    }
+    &__title {
+        @include font('Lato', 24px, 400, $darkgray);
+        margin-bottom: 30px;
+    }
+    &__text {
+        @include font('Lato', 16px, 400, $darkgray);
+        text-align: center;
+    }
+}

@@ -1,0 +1,22 @@
+.section {
+    &__impressed {
+        height: 30vh;
+        background: url('./../images/impressed/impressed-bg.png')center no-repeat;
+        @include display-flex(column, center, center);
+        padding-top: 100px;
+        @media (max-height: 768px) {
+            padding-top: 50px;
+        }
+    }
+    &__title {
+        &--impressed {
+            margin-bottom: 5px;
+        }
+    }
+    &__button {
+        &--impressed {
+            background-color: $white;
+            color: $gray;
+        }
+    }
+}

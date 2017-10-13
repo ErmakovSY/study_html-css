@@ -1,0 +1,15 @@
+.footer {
+    width: 100%;
+    padding: 20px 400px;
+    background-color: $yellow;
+    @include display-flex(row, space-between, center);
+    @media(max-width: 1366px) {
+        padding: 20px 25px;
+    }
+}
+.header__link--black {
+    color: $black;
+    &:hover {
+        color: $gray;
+    }
+}

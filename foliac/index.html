@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test page for Flexbox</title>
+    <link href="styles/main.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+                
+            <div class="header__nav">
+
+                <div class="header__nav--logo">
+                    <img src="images/logo.png">
+                </div>
+                <div class="header__nav--list">
+                    <a href="" class="header__nav--item">Accueil</a>
+                    <a href="#portfolio" class="header__nav--item">Portfolio</a>
+                    <a href="#about" class="header__nav--item">About</a>
+                    <a href="#contact" class="header__nav--item">Contact</a>
+                </div>
+
+            </div>
+            <div class="header__content">
+
+                <p class="header__content--title">voici votre prochain portfolio</p>
+                <p class="header__content--subtitle">un template psd simple et gratui</p>
+                <button class="header__button">mes travaux</button>
+
+            </div>
+                        
+        </div>
+    </header>
+    <section class="container" id="portfolio">
+        <div class="main__btn-section">
+            <div class="main__btn-section--item">
+                <p class="main__btn-section--item-text">Tous les projets</p>
+            </div>
+            <div class="main__btn-section--item">
+                <p class="main__btn-section--item-text">Webdesign</p>
+            </div>
+            <div class="main__btn-section--item">
+                <p class="main__btn-section--item-text">TUI/UX design</p>
+            </div>
+            <div class="main__btn-section--item">
+                <p class="main__btn-section--item-text">Illustration</p>
+            </div>
+            <div class="main__btn-section--item">
+                <p class="main__btn-section--item-text">Motion design</p>
+            </div>
+        </div>
+        <div class="main__content container">
+           
+            <div class="main__content--row main__content--row--row1">
+    
+                <div class="main__content--item main__content--item--pos11">
+                    <img class="main__content--image" src="images/content-image1.png" alt="image1" />
+                    <div class="main__content--item--overlay">
+                        <p class="item__overlay--title">Forest app</p>
+                        <p class="item__overlay--subtitle">application mobile</p>
+                    </div>
+                </div>
+                <div class="main__content--item main__content--item--pos12">
+                    <img class="main__content--image" src="images/content-image2.png" alt="image2" />
+                    <div class="main__content--item--overlay">
+                        <p class="item__overlay--title">Forest app</p>
+                        <p class="item__overlay--subtitle">application mobile</p>
+                    </div>
+                </div>
+            </div>
+            <div class="main__content--row main__content--row--row2">
+                <div class="main__content--item main__content--item-pos21">
+                    <img class="main__content--image" src="images/content-image3.png" alt="image3" />
+                    <div class="main__content--item--overlay">
+                        <p class="item__overlay--title">Forest app</p>
+                        <p class="item__overlay--subtitle">application mobile</p>
+                    </div>
+                </div>
+                <div class="main__content--item main__content--item--pos22">
+                    <img class="main__content--image" src="images/content-image4.png" alt="image4" />
+                    <div class="main__content--item--overlay">
+                        <p class="item__overlay--title">Forest app</p>
+                        <p class="item__overlay--subtitle">application mobile</p>
+                    </div>
+                </div>
+            </div>
+                    
+        </div>  
+    </section>
+    <section class="aboutme" id="about">
+       <div class="container aboutme__container">
+           <div class="aboutme__data">
+               <p class="aboutme__title">Michel Dupont</p>
+               <p class="aboutme__subtitle">Webdesigner, illustrateur, auteur</p>
+               <p class="aboutme__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+               <button class="aboutme__button">me contacter</button>
+           </div>
+       </div>
+    </section>
+    <section class="form container" id="contact">
+       <div class="form__block">
+           <p class="form__title">me contacter</p>
+           <div class="form__block--inputs">
+               <input type="text" class="form__input--name form__input" placeholder="Votre nom" />
+               <input type="text" class="form__input--email form__input" placeholder="Votre email" />
+           </div>
+           <textarea class="form__input--message form__input" placeholder="Votre message"></textarea>
+           <button class="form__button">envoyer</button>
+       </div>
+    </section>
+    <footer class="footer">
+        <div class="container footer__container">
+            <p class="footer__text">Copyright © 2015 by beneggen - www.beneggen.fr</p>
+            <div class="footer__social">
+                <div class="footer__social--item footer__social--twitter"><img src="./images/Twitter.png" alt="Twitter" class="footer__image--twitter"></div>
+                <div class="footer__social--item footer__social--linkedin"><img src="./images/LinkedIn.png" alt="LinkedIn" class="footer__image--linkedin"></div>
+                <div class="footer__social--item footer__social--dribbble"><img src="./images/Dribbble.png" alt="Dribbble" class="footer__image--dribbble"></div>
+                <div class="footer__social--item footer__social--behance"><img src="./images/Behance.png" alt="Behance" class="tfooter__image--behance"></div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

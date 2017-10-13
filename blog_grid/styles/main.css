@@ -1,0 +1,336 @@
+@font-face {
+  font-family: 'HansKendrick';
+  src: url("./../fonts/hanskendrick-regular-webfont.woff2") format("woff2"), url("./../fonts/hanskendrick-regular-webfont.woff") format("woff"), url("./../fonts/hanskendrick-regular-webfont.otf") format("otf");
+  font-weight: normal;
+  font-style: normal; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #E2E7EC;
+  padding-top: 90px; }
+
+@keyframes animate-top {
+  0% {
+    opacity: 0; }
+  14.3% {
+    opacity: 1; }
+  28.6% {
+    opacity: 1; }
+  42.9% {
+    opacity: 1; }
+  57.2% {
+    opacity: 1; }
+  71.5% {
+    opacity: 1; }
+  85.8% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+@keyframes animate-top-right {
+  0% {
+    opacity: 1; }
+  14.3% {
+    opacity: 0; }
+  28.6% {
+    opacity: 1; }
+  42.9% {
+    opacity: 1; }
+  57.2% {
+    opacity: 1; }
+  71.5% {
+    opacity: 1; }
+  85.8% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+@keyframes animate-right {
+  0% {
+    opacity: 1; }
+  14.3% {
+    opacity: 1; }
+  28.6% {
+    opacity: 0; }
+  42.9% {
+    opacity: 1; }
+  57.2% {
+    opacity: 1; }
+  71.5% {
+    opacity: 1; }
+  85.8% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+@keyframes animate-bottom-right {
+  0% {
+    opacity: 1; }
+  14.3% {
+    opacity: 1; }
+  28.6% {
+    opacity: 1; }
+  42.9% {
+    opacity: 0; }
+  57.2% {
+    opacity: 1; }
+  71.5% {
+    opacity: 1; }
+  85.8% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+@keyframes animate-bottom {
+  0% {
+    opacity: 1; }
+  14.3% {
+    opacity: 1; }
+  28.6% {
+    opacity: 1; }
+  42.9% {
+    opacity: 1; }
+  57.2% {
+    opacity: 0; }
+  71.5% {
+    opacity: 1; }
+  85.8% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+@keyframes animate-bottom-left {
+  0% {
+    opacity: 1; }
+  14.3% {
+    opacity: 1; }
+  28.6% {
+    opacity: 1; }
+  42.9% {
+    opacity: 1; }
+  57.2% {
+    opacity: 1; }
+  71.5% {
+    opacity: 0; }
+  85.8% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+@keyframes animate-left {
+  0% {
+    opacity: 1; }
+  14.3% {
+    opacity: 1; }
+  28.6% {
+    opacity: 1; }
+  42.9% {
+    opacity: 1; }
+  57.2% {
+    opacity: 1; }
+  71.5% {
+    opacity: 1; }
+  85.8% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes animate-top-left {
+  0% {
+    opacity: 1; }
+  14.3% {
+    opacity: 1; }
+  28.6% {
+    opacity: 1; }
+  42.9% {
+    opacity: 1; }
+  57.2% {
+    opacity: 1; }
+  71.5% {
+    opacity: 1; }
+  85.8% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+.main__container {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap; }
+.main__item {
+  border: 1px solid transparent;
+  width: calc((100% - 40px) / 3);
+  margin-bottom: 20px;
+  position: relative; }
+  .main__item--double {
+    width: calc(((100% - 40px) / 3) * 2 + 20px); }
+  .main__item:hover {
+    cursor: pointer;
+    border: 1px solid #9B978F; }
+  .main__item:hover .item__overlay {
+    opacity: 0.2; }
+
+.item__img-wrapper {
+  width: 100%;
+  height: 45%;
+  position: relative; }
+  .item__img-wrapper--double {
+    height: 100%; }
+  .item__img-wrapper--face {
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 30px;
+    left: 30px; }
+.item__img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; }
+.item__overlay {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: orange; }
+.item__text-wrapper {
+  width: 100%;
+  height: 55%;
+  min-height: 300px;
+  padding: 30px;
+  background-color: #FFF;
+  margin-bottom: 55px; }
+  .item__text-wrapper--double {
+    position: absolute;
+    height: auto;
+    min-height: 0;
+    padding: 0;
+    bottom: 40px;
+    left: 45px;
+    width: 60%;
+    background-color: transparent;
+    margin-bottom: 0; }
+.item__date {
+  font-family: "HansKendrick";
+  font-size: 12px;
+  font-weight: 200;
+  color: #9B978F;
+  text-transform: uppercase;
+  margin-bottom: 20px; }
+.item__title {
+  font-family: "HansKendrick";
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+  text-transform: uppercase; }
+  .item__title--double {
+    font-family: "HansKendrick";
+    font-size: 30px;
+    font-weight: 600;
+    color: #FFF;
+    text-transform: uppercase; }
+
+.footer {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .footer__wrapper {
+    height: 28px;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .footer__text {
+    font-family: "HansKendrick";
+    font-size: 13px;
+    font-weight: 600;
+    color: #9B978F;
+    text-transform: uppercase; }
+  .footer__anim {
+    height: 28px;
+    width: 28px;
+    position: relative; }
+    .footer__anim--top {
+      height: 7px;
+      width: 4px;
+      background-color: #9B978F;
+      position: absolute;
+      top: 0;
+      left: 12px;
+      animation: animate-top 2s infinite;
+      transition: all 0.3s ease-in-out; }
+    .footer__anim--top-right {
+      height: 7px;
+      width: 4px;
+      background-color: #9B978F;
+      position: absolute;
+      top: 3px;
+      left: 19px;
+      transform: rotate(45deg);
+      animation: animate-top-right 2s infinite;
+      transition: all 0.3s ease-in-out; }
+    .footer__anim--right {
+      height: 4px;
+      width: 7px;
+      background-color: #9B978F;
+      position: absolute;
+      top: 12px;
+      right: 0;
+      animation: animate-right 2s infinite;
+      transition: all 0.3s ease-in-out; }
+    .footer__anim--bottom-right {
+      height: 7px;
+      width: 4px;
+      background-color: #9B978F;
+      position: absolute;
+      left: 19px;
+      bottom: 3px;
+      transform: rotate(135deg);
+      animation: animate-bottom-right 2s infinite;
+      transition: all 0.3s ease-in-out; }
+    .footer__anim--bottom {
+      height: 7px;
+      width: 4px;
+      background-color: #9B978F;
+      position: absolute;
+      bottom: 0;
+      left: 12px;
+      animation: animate-bottom 2s infinite;
+      transition: all 0.3s ease-in-out; }
+    .footer__anim--bottom-left {
+      height: 7px;
+      width: 4px;
+      background-color: #9B978F;
+      position: absolute;
+      right: 19px;
+      bottom: 3px;
+      transform: rotate(225deg);
+      animation: animate-bottom-left 2s infinite;
+      transition: all 0.3s ease-in-out; }
+    .footer__anim--left {
+      height: 4px;
+      width: 7px;
+      background-color: #9B978F;
+      position: absolute;
+      top: 12px;
+      left: 0;
+      animation: animate-left 2s infinite;
+      transition: all 0.3s ease-in-out; }
+    .footer__anim--top-left {
+      height: 7px;
+      width: 4px;
+      background-color: #9B978F;
+      position: absolute;
+      top: 3px;
+      right: 19px;
+      transform: rotate(315deg);
+      animation: animate-top-left 2s infinite;
+      transition: all 0.3s ease-in-out; }
+.cbalink {
+	display: none;
+
+/*# sourceMappingURL=main.css.map */

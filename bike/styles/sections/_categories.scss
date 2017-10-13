@@ -1,0 +1,71 @@
+.section {
+    &__categories {
+        height: 80vh;
+        background: $white url('./../images/cat-bg.png');
+        padding: 75px;
+    }
+    &__title {
+        text-align: center;
+        @include font('Roboto', 28px, 700, $black);
+        text-transform: uppercase;
+        margin-bottom: 75px;
+        @media(max-width: 1366px) {
+            margin-bottom: 25px;
+        }
+    }
+    &__wrapper {
+        @include display-flex(row, space-between, center);
+    }
+    &__item {
+        width: calc((100% - 60px) / 3);
+        margin-right: 30px;
+        position: relative;
+        &:last-child {
+            margin-right: 0;
+        }
+        &:hover .section__overlay--bg {
+            @include transition(0.3s);
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+    &__overlay {
+        &--text {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include display-flex(column, center, center);
+        }
+        &--bg {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+    }
+}
+.overlay {
+    &__title {
+        @include font('Roboto', 15px, 700, $yellow);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+    &__subtitle {
+        @include font('Roboto', 16px, 300, $white);
+        margin-bottom: 15px;
+    }
+    &__btn {
+        @include font('Roboto', 12px, 700, $white);
+        text-transform: uppercase;
+        width: 120px;
+        height: 44px;
+        border: 2px solid $white;
+        border-radius: 5px;
+        background-color: $trp;
+    }
+}
